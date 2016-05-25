@@ -1,6 +1,6 @@
 ##settings.xml
 
-配置文件
+配置文件  
 
 - <localRepository>${user.home}/.m2/repository</localRepository>本地仓库位置
 - <interactiveMode>true</interactiveMode>true表示mave可以使用用户输入，默认true

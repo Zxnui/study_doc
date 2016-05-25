@@ -45,7 +45,8 @@ netstat
 ps -aux|grep tomcat  
 
 ##增删改查
-mkdir dirName  
+mkdir dirName 
+rmdir dirName   
 cd dirName  
 touch fileName.c  
 rm -rf fileName.c  
@@ -53,4 +54,14 @@ mv ./oldFileName.c ./newFileName.c
 cp ./oldFileName.c ./newFileName.c  
 ll  
 ls  
-ls -al  
+ls -al   
+pwd  
+
+##读取
+vi fileName  
+more fileName  
+less fileName 
+head -n 100 fileName  
+tail -n 100 fileName   
+od  fileName  
+echo 可以在屏幕上显示任何东西
