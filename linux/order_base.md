@@ -28,6 +28,7 @@ date -- help
 date -h  
 man date  
 info date  
+file /usr/bin/passwd查看档案使用到的库，可以判断档案大体类型
 
 ##时间
 date  
@@ -37,6 +38,16 @@ date +%H:%M
 cal  
 cal 2016  
 cal 10 2016  
+
+##空间
+- df针对整个档案
+df -h
+
+- du针对目录
+-a 所有
+-h G/M显示容量
+-s 总量
+-S 不包括子目录，总量
 
 ##检测
 who  
@@ -56,8 +67,10 @@ ll
 ls  
 ls -al   
 pwd  
+ln -s /from /to	软链接
 
 ##读取
+tail -f fileName
 vi fileName  
 more fileName  
 less fileName 
