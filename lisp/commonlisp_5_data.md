@@ -31,25 +31,25 @@ NIL
 ##字符和字符串
 每个字符都有一个相关的整数 ── 通常是 ASCII 码，但不一定是。在多数的 Lisp 实现里，函数 char-code 返回与字符相关的数字，而 code-char 返回与数字相关的字符。  
 字符比较函数 char< （小于）， char<= （小于等于)， char= （等于)， char>= （大于等于) ， char> （大于)，以及 char/= （不同)  
->(sort "elbow" #'char<)//从小到达排列字符  
+\>(sort "elbow" #'char<)//从小到达排列字符  
 "below"  
->(char "abc" 1)//取出字符  
+\>(char "abc" 1)//取出字符  
 \#\\b  
->(equal "fred" "fred")  
+\>(equal "fred" "fred")  
 T  
->(equal "fred" "Fred")  
+\>(equal "fred" "Fred")  
 NIL  
->(string-equal "fred" "Fred")//忽略大小写，比较字符串  
+\>(string-equal "fred" "Fred")//忽略大小写，比较字符串  
 T  
->(format nil "~A or ~A" "truth" "dare")//创建字符串  
+\>(format nil "~A or ~A" "truth" "dare")//创建字符串  
 "truth or dare"  
->(concatenate 'string "not " "to worry")//将字符串串接起来  
+\>(concatenate 'string "not " "to worry")//将字符串串接起来  
 "not to worry"  
 ###字符串，当作序列来操作
->(mirror? "abba")//对称  
+\>(mirror? "abba")//对称  
 T  
 **我们已经看过四种用来取出序列元素的函数： 给列表使用的 nth ， 给向量使用的 aref 及 svref ，以及给字符串使用的 char 。 Common Lisp 也提供了通用的 elt ，对任何种类的序列都有效**  
->(elt '(a b c) 1)//elt效率不如其他特定的取出函数  
+\>(elt '(a b c) 1)//elt效率不如其他特定的取出函数  
 B  
 ###许多序列函数接受一个或多个，由下表所列的标准关键字参数：
 参数      用途                    缺省值  
@@ -83,12 +83,12 @@ NIL
 **position-if 接受除了 :test 之外的所有关键字参数**
 
 ##结构
->(defstruct point x y)  
+\>(defstruct point x y)  
 这里定义了一个 point 结构，具有两个字段 x 与 y 。同时隐式地定义了 make-point 、 point-p 、 copy-point 、 point-x 及 point-y 函数。  
 ##哈希表
 列表可以用来表示集合（sets）与映射（mappings）。但当列表的长度大幅上升时（或是 10 个元素），使用哈希表的速度比较快。你通过调用 make-hash-table 来构造一个哈希表，它不需要传入参数  
->(setf ht (make-hash-table))  
-\#<Hash-Table BF0A96>  
+\>(setf ht (make-hash-table))  
+\#\<Hash-Table BF0A96\>  
 - 获取哈希值  
 >(gethash 'color ht)  
 NIL  
