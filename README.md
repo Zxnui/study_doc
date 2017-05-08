@@ -2,4 +2,4 @@
 
 - zhuxunui@gmail.com
 - http://git.oschina.net/Zxnui
-- http://www.zxnui.cn
+- http://www.team-http.cn
